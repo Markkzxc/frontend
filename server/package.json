@@ -22,5 +22,5 @@
     "typescript": "^5.9.3"
   },
   "license": "ISC",
-  "type": "module"
+  "type": "commonjs"
 }
