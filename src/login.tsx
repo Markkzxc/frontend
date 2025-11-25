@@ -10,10 +10,10 @@ export default function AuthPage() {
   const [fullname, setFullname] = useState("");
   const [message, setMessage] = useState("");
 
-  const api = axios.create({
-    baseURL: "http://localhost:4000",
-    headers: { "Content-Type": "application/json" },
-  });
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL, // <- environment variable
+  headers: { "Content-Type": "application/json" },
+});
 
   const handleLogin = async () => {
     try {
