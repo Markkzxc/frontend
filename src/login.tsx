@@ -11,8 +11,8 @@ export default function AuthPage() {
   const [message, setMessage] = useState("");
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL, // <- environment variable
-  headers: { "Content-Type": "application/json" },
+    baseURL: "https://backend2-9jkj.onrender.com", // your deployed backend
+    headers: { "Content-Type": "application/json" },
 });
 
   const handleLogin = async () => {

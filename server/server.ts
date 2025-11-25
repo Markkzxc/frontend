@@ -22,7 +22,10 @@ interface Todo {
 }
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: ["https://tenio-frontend.vercel.app"] // your deployed frontend URL
+}));
 app.use(express.json());
 
 // const db = mysql.createPool({

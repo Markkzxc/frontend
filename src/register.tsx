@@ -9,10 +9,10 @@ export default function RegisterPage() {
   const [role, setRole] = useState("user");
   const [message, setMessage] = useState("");
 
-  const api = axios.create({
-    baseURL: "http://localhost:4000",
+const api = axios.create({
+    baseURL: "https://backend2-9jkj.onrender.com", // your deployed backend
     headers: { "Content-Type": "application/json" },
-  });
+});
 
   const handleRegister = async () => {
     if (!email || !username || !password) {
