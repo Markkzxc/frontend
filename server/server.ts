@@ -2,6 +2,17 @@ import express from "express";
 import cors from "cors";
 import mysql from "mysql2/promise";
 import type { RowDataPacket } from "mysql2";
+import dotenv from "dotenv";
+dotenv.config();
+
+const db = mysql.createPool({
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "root",
+  database: process.env.DB_NAME || "typescript2",
+  port: Number(process.env.DB_PORT) || 3306,
+});
+export default db;
 
 interface Todo {
   id?: number;
@@ -14,12 +25,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "typescript2",
-});
+// const db = mysql.createPool({
+//   host: "localhost",
+//   user: "root",
+//   password: "root",
+//   database: "typescript2",
+// });
 
 // ===== TODOS CRUD =====
 
