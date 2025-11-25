@@ -1,0 +1,143 @@
+/* Full screen dashboard */
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #e0f0ff, #c0e0ff);
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #1d4ed8;
+  margin: 0;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Main layout */
+.dashboard-main {
+  display: flex;
+  gap: 40px;
+}
+
+/* Form container */
+.form-container {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #1e40af;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-container textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-container button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-container button:hover {
+  background-color: #1e40af;
+}
+
+.message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Todos container */
+.todos-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.todo-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.todo-item:hover {
+  background-color: #f0f9ff;
+}
+
+.todo-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #1d4ed8;
+}
+
+.todo-item p {
+  margin: 0;
+  color: #555;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  font-size: 1.1re
+}
