@@ -18,7 +18,7 @@ export default function Dashboard() {
   const [success, setSuccess] = useState<boolean | null>(null); // null = no message, true = success, false = error
   const [editingTodo, setEditingTodo] = useState<Todo | null>(null);
 
-  const api = axios.create({ baseURL: "http://localhost:4000" });
+  const api = axios.create({ baseURL: "https://backend2-9jkj.onrender.com" });
 
   // Helper for detailed error messages
   const handleError = (error: unknown, context: string) => {
